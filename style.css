@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #faf9fb, #e0f7fa);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-shadow: 1px 1px 2px #aaa;
+}
+
+#display {
+  font-size: 3em;
+  margin: 20px auto;
+  color: #222;
+  letter-spacing: 2px;
+  border: 3px solid #050505;
+  border-radius: 10px;
+  padding: 15px;
+  width: fit-content;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Blinking colon effect */
+.blink {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.buttons {
+  margin: 20px 0;
+}
+button {
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 5px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+button:active {
+  transform: scale(0.95);
+}
+#start { background: #4CAF50; color: white; }
+#pause { background: #FF9800; color: white; }
+#reset { background: #F44336; color: white; }
+#lap { background: #2196F3; color: white; }
+
+#laps {
+  margin-top: 20px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #2196F3;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#laps h2 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+  color: #444;
+}
+#laps ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#laps li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
